@@ -1,0 +1,13 @@
+[package]
+name = "schema-reflector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dotenv = "0.15.0"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_yaml = "0.9.34"
+thiserror = "2.0.17"
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros"] }
+tokio-postgres = "0.7.12"
+convert_case = "0.6.0"

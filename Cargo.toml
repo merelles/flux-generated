@@ -1,0 +1,31 @@
+[package]
+name = "intechsys"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1"
+axum = "0.7"
+dotenv = "0.15.0"
+paste = "1"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1.43.0", features = ["rt-multi-thread", "macros", "net", "sync"] }
+tokio-postgres = "0.7.12"
+generated-runtime = { path = "crates/generated-runtime" }
+
+[workspace]
+members = ["crates/*",]
+default-members = ["."]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["leoardo Merelles <leonardotringo@gmail.com>"]
+homepage = ""
+license = "MIT"
+description = ""
+repository = ""
+
+[workspace.dependencies]
