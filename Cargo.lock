@@ -215,6 +215,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4443176a9f2c162692bd3d352d745ef9413eec5782a80d8fd6f8a1ac692a07f7"
 
 [[package]]
+name = "flux-generated"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "axum",
+ "dotenv",
+ "generated-runtime",
+ "paste",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "tokio",
+ "tokio-postgres",
+]
+
+[[package]]
 name = "foldhash"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -427,22 +443,6 @@ dependencies = [
  "hashbrown 0.17.1",
  "serde",
  "serde_core",
-]
-
-[[package]]
-name = "intechsys"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "axum",
- "dotenv",
- "generated-runtime",
- "paste",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tokio-postgres",
 ]
 
 [[package]]

@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      target: runtime
+    container_name: flux-generated-app
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgres://flux:flux@db:5432/flux_generated}
+      BIND_ADDR: ${BIND_ADDR:-0.0.0.0:3000}
+    ports:
+      - "${APP_PORT:-3000}:3000"
+
+volumes:
+  postgres_data:
