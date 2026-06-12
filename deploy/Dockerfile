@@ -1,0 +1,12 @@
+# syntax=docker/dockerfile:1
+
+FROM docker:27-cli
+
+RUN apk add --no-cache bash git openssh-client ca-certificates
+
+WORKDIR /workspace
+
+COPY deploy/deploy-entrypoint.sh /usr/local/bin/deploy-entrypoint.sh
+RUN chmod +x /usr/local/bin/deploy-entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/deploy-entrypoint.sh"]
